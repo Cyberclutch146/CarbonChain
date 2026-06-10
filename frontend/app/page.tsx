@@ -1,95 +1,43 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Button } from "../components/ui/Button";
+import { Card, CardContent } from "../components/ui/Card";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="text-center max-w-3xl mx-auto">
+        <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl mb-6">
+          Verifiable Carbon Removal on the Blockchain
+        </h1>
+        <p className="text-xl text-gray-400 mb-10">
+          Transparent, oracle-verified carbon credits. From IoT sensor to permanent retirement, 
+          every tonne of CO₂ is tracked on-chain.
+        </p>
+        <div className="flex gap-4 justify-center">
+          <Button href="/projects" size="lg">Explore Projects</Button>
+          <Button href="/retire" variant="outline" size="lg">Retire Credits</Button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-4xl font-bold text-accent mb-2">42,000</div>
+            <div className="text-gray-400 font-medium">Tonnes Sequestered</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-4xl font-bold text-white mb-2">15,300</div>
+            <div className="text-gray-400 font-medium">Credits Retired</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-4xl font-bold text-white mb-2">3</div>
+            <div className="text-gray-400 font-medium">Active Projects</div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
