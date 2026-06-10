@@ -48,6 +48,4 @@ We replace all of that with sensors, smart contracts, and a burn function.
 - [**Detailed Analysis Report**](./Analysis-Report.md) — Full technical breakdown of the protocol design
 - [**Build Plan**](./Build-Plan.md) — Phased implementation plan with real vs. mocked component decisions
 
-## License
 
-TBD
